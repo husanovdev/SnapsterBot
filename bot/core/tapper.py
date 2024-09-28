@@ -104,7 +104,7 @@ class Tapper:
                             break
 
                     if not start_command_found:
-                        ref_id = settings.REF_ID or "ref_wjnV2yHU8MD0sL"
+                        ref_id = settings.REF_ID
                         await self.tg_client.send_message("snapster_bot", f"/start {ref_id}")
                 except (Unauthorized, UserDeactivated, AuthKeyUnregistered):
                     raise InvalidSession(self.session_name)
